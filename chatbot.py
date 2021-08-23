@@ -1,4 +1,4 @@
-from irc import *
+import irc_connection
 import json
 
 
@@ -21,7 +21,7 @@ def chat():
 
 if __name__ == "__main__":
     # connection to Twitch chat
-    irc = IRC()
+    irc = irc_connection.IRC()
     irc.connect(server, port, channel, botnick, botpass)
 
     chat()
